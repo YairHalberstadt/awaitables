@@ -16,7 +16,7 @@ You can find documentation on task like types at https://github.com/dotnet/rosly
 
 All three implementations have only limited testing and carry out only limited validation, as they were designed to highlight the possibilities of state machine based rewriting in C#, rather than to be used in production.
 
-However all three of them *almost work*. `Result<T>` and `Option<T>` are allocation free and highly efficient, and `AwaitableEnumerable<T>` only allocates the enumerable required to store the result of the method. There is just one critical limitation they all share, and which the language currently provides no way around: They do not respect the semantics of try/catch/finally or using blocks.
+However all three of them *almost work*. `Result<T>` and `Option<T>` are allocation free and highly efficient, and `AwaitableEnumerable<T>` only allocates the enumerable required to store the result of the method. There is just one critical limitation they all share, and which the language currently provides no way around: they do not respect the semantics of try/catch/finally or using blocks.
 
 The `AwaitableEnumerable<T>` returned from an async method is eager rather than lazy - currently making it lazy would require a significantly greater number of allocations, though would be possible.
 

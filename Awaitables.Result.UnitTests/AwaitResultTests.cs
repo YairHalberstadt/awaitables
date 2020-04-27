@@ -227,6 +227,85 @@ namespace Awaitables.UnitTests
             }
         }
 
+        [Fact]
+        public void ReturnNonGenericSuccess()
+        {
+            string target = null;
+            var result = M();
+            Assert.True(result.IsSuccessful);
+            Assert.Equal("the answer is 42", target);
+            async Result M()
+            {
+                var a = await Result.Success(42);
+                await Result.Success();
+                var b = await Result.Success(new List<string> { "the answer is " });
+                target = b.First() + a;
+            }
+        }
+
+        [Fact]
+        public void ReturnNonGenericFailure1()
+        {
+            string target = null;
+            var result = M();
+            Assert.False(result.IsSuccessful);
+            Assert.IsType<InvalidOperationException>(result.Exception);
+            Assert.Null(target);
+            async Result M()
+            {
+                var a = await Result.Failure<int>(new InvalidOperationException());
+                var b = await Result.Success(new List<string> { "the answer is " });
+                target = b.First() + a;
+            }
+        }
+
+        [Fact]
+        public void ReturnNonGenericFailure2()
+        {
+            string target = null;
+            var result = M();
+            Assert.False(result.IsSuccessful);
+            Assert.IsType<InvalidOperationException>(result.Exception);
+            Assert.Null(target);
+            async Result M()
+            {
+                var a = await Result.Success(42);
+                await Result.Failure(new InvalidOperationException());
+                var b = await Result.Success(new List<string> { "the answer is " });
+                target = b.First() + a;
+            }
+        }
+
+        [Fact]
+        public void AwaitNonGenericSuccess()
+        {
+            var result = M();
+            Assert.True(result.IsSuccessful);
+            Assert.Equal("the answer is 42", result.Value);
+            static async Result<string> M()
+            {
+                var a = await Result.Success(42);
+                await Result.Success();
+                var b = await Result.Success(new List<string> { "the answer is " });
+                return b.First() + a;
+            }
+        }
+
+        [Fact]
+        public void AwaitNonGenericFailure()
+        {
+            var result = M();
+            Assert.False(result.IsSuccessful);
+            Assert.IsType<InvalidOperationException>(result.Exception);
+            static async Result<string> M()
+            {
+                var a = await Result.Success(42);
+                await Result.Failure(new InvalidOperationException());
+                var b = await Result.Success(new List<string> { "the answer is " });
+                return b.First() + a;
+            }
+        }
+
         private class Disposable : IDisposable
         {
             Action _action;

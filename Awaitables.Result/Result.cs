@@ -24,9 +24,24 @@ namespace Awaitables
         public bool IsFailed => !IsSuccessful;
     }
 
-    public static class Result
+    [AsyncMethodBuilder(typeof(ResultMethodBuilder))]
+    public struct Result
     {
+        private readonly Exception? _exception;
+
+        public Result(Exception exception) => _exception = exception ?? throw new ArgumentNullException(nameof(exception));
+
+        public Exception Exception => _exception ?? throw new InvalidOperationException("Result is successful");
+
+        public bool IsSuccessful => _exception is null;
+
+        public bool IsFailed => !IsSuccessful;
+
+        public ResultAwaiter GetAwaiter() => new ResultAwaiter(this);
+
         public static Result<T> Success<T>(T value) => new Result<T>(value);
         public static Result<T> Failure<T>(Exception exception) => new Result<T>(exception);
+        public static Result Success() => new Result();
+        public static Result Failure(Exception exception) => new Result(exception);
     }
 }

@@ -33,4 +33,35 @@ namespace Awaitables
 
         public Result<T> Task { get; private set; }
     }
+
+    [EditorBrowsable(EditorBrowsableState.Never)]
+    public struct ResultMethodBuilder
+    {
+        public static ResultMethodBuilder Create() => new ResultMethodBuilder();
+
+        public void Start<TStateMachine>(ref TStateMachine stateMachine)
+            where TStateMachine : IAsyncStateMachine => stateMachine.MoveNext();
+
+        public void SetStateMachine(IAsyncStateMachine stateMachine) { }
+        public void SetException(Exception exception) => Task = Result.Failure(exception);
+        public void SetResult() => Task = Result.Success();
+
+        public void AwaitOnCompleted<TAwaiter, TStateMachine>(
+            ref TAwaiter awaiter, ref TStateMachine stateMachine)
+            where TAwaiter : INotifyCompletion, IHasException
+            where TStateMachine : IAsyncStateMachine
+        {
+            Task = Result.Failure(awaiter.Exception);
+        }
+
+        public void AwaitUnsafeOnCompleted<TAwaiter, TStateMachine>(
+            ref TAwaiter awaiter, ref TStateMachine stateMachine)
+            where TAwaiter : ICriticalNotifyCompletion
+            where TStateMachine : IAsyncStateMachine
+        {
+            throw new InvalidOperationException("An async method returning a Result can only await a Result");
+        }
+
+        public Result Task { get; private set; }
+    }
 }

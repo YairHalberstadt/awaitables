@@ -4,7 +4,7 @@ This is an experimental repo designed to highlight both the possibilities, and l
 
 ### Async State Machinery
 
-You can find documentation on task like types at https://github.com/dotnet/roslyn/pull/43635/files. Whilst the extension points to allow a task to be awaited or used as the return type of an async method are designed around task based scenarios, they can be abused for a much larger selection of monads.
+You can find documentation on task like types at https://github.com/dotnet/roslyn/blob/master/docs/features/task-types.md. Whilst the extension points to allow a task to be awaited or used as the return type of an async method are designed around task based scenarios, they can be abused for a much larger selection of monads.
 
 ### Implemented Awaitables
 

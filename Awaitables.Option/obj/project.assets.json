@@ -1,0 +1,87 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETStandard,Version=v2.1": {
+      "Awaitables.Common/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "compile": {
+          "bin/placeholder/Awaitables.Common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Awaitables.Common.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Awaitables.Common/1.0.0": {
+      "type": "project",
+      "path": "../Awaitable.Common/Awaitables.Common.csproj",
+      "msbuildProject": "../Awaitable.Common/Awaitables.Common.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETStandard,Version=v2.1": [
+      "Awaitables.Common >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\yairh\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\git\\awaitables\\Awaitables.Option\\Awaitables.Option.csproj",
+      "projectName": "Awaitables.Option",
+      "projectPath": "C:\\git\\awaitables\\Awaitables.Option\\Awaitables.Option.csproj",
+      "packagesPath": "C:\\Users\\yairh\\.nuget\\packages\\",
+      "outputPath": "C:\\git\\awaitables\\Awaitables.Option\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\yairh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "netstandard2.1"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "projectReferences": {
+            "C:\\git\\awaitables\\Awaitable.Common\\Awaitables.Common.csproj": {
+              "projectPath": "C:\\git\\awaitables\\Awaitable.Common\\Awaitables.Common.csproj"
+            }
+          }
+        }
+      }
+    },
+    "frameworks": {
+      "netstandard2.1": {
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "NETStandard.Library": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.200\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

@@ -1,0 +1,8 @@
+C:\Users\yairh\source\repos\Awaitables.Option\Awaitable.Common\bin\Release\netstandard2.1\Awaitables.Common.deps.json
+C:\Users\yairh\source\repos\Awaitables.Option\Awaitable.Common\bin\Release\netstandard2.1\Awaitables.Common.dll
+C:\Users\yairh\source\repos\Awaitables.Option\Awaitable.Common\bin\Release\netstandard2.1\Awaitables.Common.pdb
+C:\Users\yairh\source\repos\Awaitables.Option\Awaitable.Common\obj\Release\netstandard2.1\Awaitables.Common.csproj.CoreCompileInputs.cache
+C:\Users\yairh\source\repos\Awaitables.Option\Awaitable.Common\obj\Release\netstandard2.1\Awaitables.Common.AssemblyInfoInputs.cache
+C:\Users\yairh\source\repos\Awaitables.Option\Awaitable.Common\obj\Release\netstandard2.1\Awaitables.Common.AssemblyInfo.cs
+C:\Users\yairh\source\repos\Awaitables.Option\Awaitable.Common\obj\Release\netstandard2.1\Awaitables.Common.dll
+C:\Users\yairh\source\repos\Awaitables.Option\Awaitable.Common\obj\Release\netstandard2.1\Awaitables.Common.pdb

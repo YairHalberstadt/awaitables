@@ -12,6 +12,14 @@ You can find documentation on task like types at https://github.com/dotnet/rosly
 - `Result<T>`
 - `AwaitableEnumerable<T>`
 
+### Examples
+
+You can see example dummy programs here:
+
+https://github.com/YairHalberstadt/awaitables/blob/master/Awaitables.Option.Example/Program.cs
+https://github.com/YairHalberstadt/awaitables/blob/master/Awaitables.Result.Example/Program.cs
+https://github.com/YairHalberstadt/awaitables/blob/master/Awaitables.Enumerable.Example/Program.cs
+
 ### Limitations
 
 All three implementations have only limited testing and carry out only limited validation, as they were designed to highlight the possibilities of state machine based rewriting in C#, rather than to be used in production.

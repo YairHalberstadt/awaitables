@@ -7,15 +7,19 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Awaitables.Option", "Awaita
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Awaitables.Option.UnitTests", "Awaitable.Option.UnitTests\Awaitables.Option.UnitTests.csproj", "{DFC4838B-A632-4113-9343-D11378F44B06}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Awaitables.Common", "Awaitable.Common\Awaitables.Common.csproj", "{8CCA805C-06D5-45D6-8C63-14A6BA01C00D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Awaitables.Common", "Awaitable.Common\Awaitables.Common.csproj", "{8CCA805C-06D5-45D6-8C63-14A6BA01C00D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Awaitables.Result", "Awaitables.Result\Awaitables.Result.csproj", "{4B2918CC-F527-4685-B7F8-96048EF4854A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Awaitables.Result", "Awaitables.Result\Awaitables.Result.csproj", "{4B2918CC-F527-4685-B7F8-96048EF4854A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Awaitables.Result.UnitTests", "Awaitables.Result.UnitTests\Awaitables.Result.UnitTests.csproj", "{AF51CC38-A0B1-47F2-9119-40EA8072C2E6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Awaitables.Result.UnitTests", "Awaitables.Result.UnitTests\Awaitables.Result.UnitTests.csproj", "{AF51CC38-A0B1-47F2-9119-40EA8072C2E6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Awaitables.Enumerable", "Awaitables.Enumerable\Awaitables.Enumerable.csproj", "{3E59306F-08C9-4FCE-8213-8E1FC209BEAA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Awaitables.Enumerable", "Awaitables.Enumerable\Awaitables.Enumerable.csproj", "{3E59306F-08C9-4FCE-8213-8E1FC209BEAA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Awaitables.Enumerable.UnitTests", "Awaitables.Enumerable.UnitTests\Awaitables.Enumerable.UnitTests.csproj", "{120D5F74-514C-42FA-BA70-EB5484C0992D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Awaitables.Enumerable.UnitTests", "Awaitables.Enumerable.UnitTests\Awaitables.Enumerable.UnitTests.csproj", "{120D5F74-514C-42FA-BA70-EB5484C0992D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Awaitables.Result.Example", "Awaitables.Result.Examples\Awaitables.Result.Example.csproj", "{D977CAF7-DECE-4646-B5EE-A53D4700DD2D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Awaitables.Option.Example", "Awaitables.Option.Example\Awaitables.Option.Example.csproj", "{B3ADC10A-B8C6-4CF4-B61A-49A278166432}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +55,14 @@ Global
 		{120D5F74-514C-42FA-BA70-EB5484C0992D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{120D5F74-514C-42FA-BA70-EB5484C0992D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{120D5F74-514C-42FA-BA70-EB5484C0992D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D977CAF7-DECE-4646-B5EE-A53D4700DD2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D977CAF7-DECE-4646-B5EE-A53D4700DD2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D977CAF7-DECE-4646-B5EE-A53D4700DD2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D977CAF7-DECE-4646-B5EE-A53D4700DD2D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B3ADC10A-B8C6-4CF4-B61A-49A278166432}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3ADC10A-B8C6-4CF4-B61A-49A278166432}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3ADC10A-B8C6-4CF4-B61A-49A278166432}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3ADC10A-B8C6-4CF4-B61A-49A278166432}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

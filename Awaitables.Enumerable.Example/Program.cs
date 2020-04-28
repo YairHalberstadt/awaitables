@@ -24,13 +24,9 @@ namespace Awaitables.Example
             while(exception is AggregateException aggregateException)
             {
                 exception = await aggregateException.InnerExceptions.ToAwaitable();
-                if (!(exception is AggregateException))
-                {
-                    Console.WriteLine(exception.Message);
-                    return exception;
-                }
             }
-            throw new InvalidOperationException("Unreachable");
+            Console.WriteLine(exception.Message);
+            return exception;
         }
     }
 }

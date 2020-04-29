@@ -51,5 +51,4 @@ namespace Awaitables.Example
             ? throw new InvalidDataException("Too many items!!!")
             : data.Count();
     }
-
 }

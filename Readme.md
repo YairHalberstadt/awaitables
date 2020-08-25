@@ -2,6 +2,8 @@
 
 This is an experimental repo designed to highlight both the possibilities, and limitations, of using async await for monads other than Task like types.
 
+I'm hoping to achieve better language support for this - check out the issue at https://github.com/dotnet/csharplang/issues/3403.
+
 ### Async State Machinery
 
 You can find documentation on task like types at https://github.com/dotnet/roslyn/blob/master/docs/features/task-types.md. Whilst the extension points to allow a task to be awaited or used as the return type of an async method are designed around task based scenarios, they can be abused for a much larger selection of monads.
